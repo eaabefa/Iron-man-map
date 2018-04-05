@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="us">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Example Page</title>
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+
+    <!--///// indhold /////-->
+    <header id="header">
+        <h1>
+            Iron Man
+        </h1>
+        <button id='fly'>Start</button>
+
+    </header>
+
+    <section class="container">
+        <section id="kort1">
+            <br/>
+        </section>
+
+        <section id="nr1">
+            <div id='map'></div>
+
+
+            <article>
+                <p>Iron Man location: Tony Stark turns up at the charity ball: Disney Concert Hall, downtown Los Angeles</p>
+                <p>Iron Man locations range across California and Nevada, as Director Jon Favreau hits the target with the comic book adaptation, teasingly kicking off the Marvel Avengers franchise. Robert Downey Jr effortlessly brings laidback charm and real wit to the character of industrialist Tony Stark.</p>
+                <button id="naste-nr1">Next</button>
+
+            </article>
+        </section>
+
+        <section id="nr2">
+
+
+            <div id='map2'></div>
+            <article>
+                <p>Iron Man location: Tony Stark is kidnapped in ‘Afghanistan’: Alabama Hills, Lone Pine, California
+                </p>
+
+                <p>
+                    The landscapes of ‘Kunar Province, Afghanistan’, where Stark is captured after a raid on the army convoy, are the familiar Alabama Hills (nothing to do with the state) at Lone Pine on Route 395, central California. The strange, bulbous rock formations – a comfortable car ride from Los Angeles – have been a screen favourite since the earliest days of Hollywood.
+                </p>
+                <img src="images/iron2.jpg">
+                <button id="naste-nr2">Next</button>
+            </article>
+
+
+
+
+        </section>
+
+        <section id="nr3">
+
+            <article>
+                <p>Iron Man location: the desert of ‘Afghanistan’: Movie Road, Alabama Hills, Lone Pine, California
+                </p>
+
+                <p>
+                    Not only the backdrop to countless Westerns, they’ve often stood in for the Middle East or India’s Northwest Frontier, in films such as King of the Khyber Rifles, Gunga Din and The Charge of the Light Brigade. The road up to the Hills is actually called Movie Road, and the town of Lone Pine celebrates its screen fame annually with the Lone Pine Film Festival. When Tony Stark finally escapes from captivity in the prototype metal suit, he lands in the white sands of the Olancha Sand Dunes, east of the town of Olancha on the I-395, about 20 miles to the south of Lone Pine.
+                </p>
+                <button id="naste-nr3">Next</button>
+
+            </article>
+            <div id='map3'></div>
+
+        </section>
+        <section id="nr4">
+            <div id='map4'></div>
+            <article>
+                <p>Iron Man location: Tony Stark misses the award presentation: Caesar’s Palace, Las Vegas
+                </p>
+
+                <p>
+                    Stark misses the presentation of the ‘Apogee Award’ at Caesar’s Palace, 3570 Las Vegas Boulevard South, but he gets more than an interview from journalist Christine Everhart (Leslie Bibb) afterwards. Everhart wakes up in Stark’s impossibly luxurious home, which is just that – impossible. It’s no more than CGI, superimposed on the bluff at Point Dume in Malibu – pretty much overlooking the beach where Charlton Heston ended up at the end of Planet of the Apes. Stark Industry’s air field is Edwards Air Force Base, about 25 miles northeast of Lancaster in the Mojave Desert, California. The base is a screen regular, having appeared in The Right Stuff, Armageddon and the Transformers movies. It’s back to LA, or at least, Orange County, to find the HQ of ‘Stark Industries’, where Stark takes Obadiah Stane (Jeff Bridges) by surprise with his impromptu press conference. It’s the HQ of Nikken at Irvine Center Drive and Discovery in Irvine, south of the city. Testing his revamped suit, Stark flies from Malibu down to coast and over the illuminated Santa Monica Pier, at the end of Colorado Avenue, Santa Monica.
+                </p>
+                <img src="images/iron4.jpg">
+                <button id="naste-nr4">Next</button>
+
+            </article>
+        </section>
+
+        <section id="nr5">
+            <div id='map5'></div>
+
+
+            <article>
+                <p>Iron Man location: Obadiah Stane reveals his deception to Tony Stark on the steps of the Disney Concert Hall, downtown Los Angeles
+                </p>
+
+                <p>
+                    He unexpectedly turns up to the charity ball at the Walt Disney Concert Hall, 111 South Grand Avenue, downtown LA, where he makes a discovery about Stane’s real plan. Frank Gehry’s dazzling, convoluted stainless steel landmark, opened in 2003, is home to the Los Angeles Philharmonic. You can see it again in the 2008 spoof Get Smart, with Steve Carrell, and in Joe Wright’s 2009 drama The Soloist, with Downey Jr again, and Jamie Foxx.
+                </p>
+                <img src="images/iron5.jpg">
+                <button id="naste-nr5">Finish</button>
+
+            </article>
+
+        </section>
+    
+    <section id="nr6">
+
+            <section>
+                <h2>Thanks for Watching</h2>
+            </section>
+                <button id="til-top">Back to top</button>
+
+        </section>
+    </section>
+    
+    <!--///// slut ////////-->
+
+    <!-- jQuery scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <!-- dit script herfra -->
+    <script>
+        $(document).ready(function() {
+
+            $("#fly").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#nr1").offset().top
+                }, 1000);
+            });
+
+            $("#naste-nr1").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#nr2").offset().top
+                }, 1000);
+                $()
+            });
+
+            $("#naste-nr2").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#nr3").offset().top
+                }, 1000);
+            });
+
+            $("#naste-nr3").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#nr4").offset().top
+                }, 1000);
+            });
+            $("#naste-nr4").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#nr5").offset().top
+                }, 1000);
+            });            
+            $("#naste-nr5").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#nr6").offset().top
+                }, 1000);
+            });
+            $("#til-top").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#header").offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZWFhYmVmYSIsImEiOiJjamZqZDQyNjM1cW1mMnJudjZubXB0OGQwIn0.lMLNtIFv-OHfk3I5QIjQRw';
+        var start = [-118.24996, 34.05543];
+        var end = [-118.24996, 34.05543];
+
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/eaabefa/cjfmd3zck0tvw2rquj0u1cu6b',
+            center: start,
+            zoom: 3,
+            pitch: 0,
+            bearing: 0,
+        });
+        var map2 = new mapboxgl.Map({
+            container: 'map2',
+            style: 'mapbox://styles/eaabefa/cjfmd3zck0tvw2rquj0u1cu6b',
+            center: start,
+            zoom: 9,
+        });
+        var map3 = new mapboxgl.Map({
+            container: 'map3',
+            style: 'mapbox://styles/eaabefa/cjfmd3zck0tvw2rquj0u1cu6b',
+            center: start,
+            zoom: 9
+        });
+
+        var map4 = new mapboxgl.Map({
+            container: 'map4',
+            style: 'mapbox://styles/eaabefa/cjfmd3zck0tvw2rquj0u1cu6b',
+            center: start,
+            zoom: 9
+        });
+
+        var map5 = new mapboxgl.Map({
+            container: 'map5',
+            style: 'mapbox://styles/eaabefa/cjfmd3zck0tvw2rquj0u1cu6b',
+            center: start,
+            zoom: 9
+        });
+
+        var isAtStart = true;
+
+        document.getElementById('fly').addEventListener('click', function() {
+
+            map.flyTo({
+                center: [-118.24996, 34.05543],
+                zoom: 17.5,
+                bearing: -45.6,
+                pitch: 45,
+
+
+
+                speed: 3, // make the flying slow
+                curve: 0.5, // change the speed at which it zooms out
+
+                // This can be any easing function: it takes a number between
+                // 0 and 1 and returns another number between 0 and 1.
+                easing: function(t) {
+                    return t;
+                }
+            });
+        });
+        document.getElementById('naste-nr1').addEventListener('click', function() {
+
+            map2.flyTo({
+                center: [-118.06310, 36.60044],
+                zoom: 14,
+                bearing: -45.6,
+                pitch: 45,
+
+
+
+                speed: 3, // make the flying slow
+                curve: 0.5, // change the speed at which it zooms out
+
+                // This can be any easing function: it takes a number between
+                // 0 and 1 and returns another number between 0 and 1.
+                easing: function(t) {
+                    return t;
+                }
+            });
+        });
+        document.getElementById('naste-nr2').addEventListener('click', function() {
+
+            map3.flyTo({
+                center: [-118.11325, 36.59735],
+                zoom: 11,
+                bearing: -45.6,
+                pitch: 45,
+
+
+
+                speed: 3, // make the flying slow
+                curve: 0.5, // change the speed at which it zooms out
+
+                // This can be any easing function: it takes a number between
+                // 0 and 1 and returns another number between 0 and 1.
+                easing: function(t) {
+                    return t;
+                }
+            });
+        });
+        document.getElementById('naste-nr3').addEventListener('click', function() {
+
+            map4.flyTo({
+                center: [-115.17503, 36.11954],
+                zoom: 17,
+                bearing: -95.6,
+                pitch: 90,
+
+
+
+                speed: 3, // make the flying slow
+                curve: 0.5, // change the speed at which it zooms out
+
+                // This can be any easing function: it takes a number between
+                // 0 and 1 and returns another number between 0 and 1.
+                easing: function(t) {
+                    return t;
+                }
+            });
+        });
+document.getElementById('naste-nr4').addEventListener('click', function() {
+
+            map5.flyTo({
+                center: [-118.24996, 34.05443],
+                zoom: 18,
+                bearing: -60,
+                pitch: 90,
+
+
+
+                speed: 3, // make the flying slow
+                curve: 0.5, // change the speed at which it zooms out
+
+                // This can be any easing function: it takes a number between
+                // 0 and 1 and returns another number between 0 and 1.
+                easing: function(t) {
+                    return t;
+                }
+            });
+        });
+        map.on('load', function() {
+            // Insert the layer beneath any symbol layer.
+            var layers = map.getStyle().layers;
+
+            var labelLayerId;
+            for (var i = 0; i < layers.length; i++) {
+                if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+                    labelLayerId = layers[i].id;
+                    break;
+                }
+            }
+
+            map.addLayer({
+                'id': '3d-buildings',
+                'source': 'composite',
+                'source-layer': 'building',
+                'filter': ['==', 'extrude', 'true'],
+                'type': 'fill-extrusion',
+                'minzoom': 15,
+                'paint': {
+                    'fill-extrusion-color': '#aaa',
+
+                    // use an 'interpolate' expression to add a smooth transition effect to the
+                    // buildings as the user zooms in
+                    'fill-extrusion-height': [
+                        "interpolate", ["linear"],
+                        ["zoom"],
+                        15, 0,
+                        15.05, ["get", "height"]
+                    ],
+                    'fill-extrusion-base': [
+                        "interpolate", ["linear"],
+                        ["zoom"],
+                        15, 0,
+                        15.05, ["get", "min_height"]
+                    ],
+                    'fill-extrusion-opacity': .6
+                }
+            }, labelLayerId);
+        });
+        map4.on('load', function() {
+            // Insert the layer beneath any symbol layer.
+            var layers = map.getStyle().layers;
+
+            var labelLayerId;
+            for (var i = 0; i < layers.length; i++) {
+                if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+                    labelLayerId = layers[i].id;
+                    break;
+                }
+            }
+
+            map4.addLayer({
+                'id': '3d-buildings',
+                'source': 'composite',
+                'source-layer': 'building',
+                'filter': ['==', 'extrude', 'true'],
+                'type': 'fill-extrusion',
+                'minzoom': 15,
+                'paint': {
+                    'fill-extrusion-color': '#aaa',
+
+                    // use an 'interpolate' expression to add a smooth transition effect to the
+                    // buildings as the user zooms in
+                    'fill-extrusion-height': [
+                        "interpolate", ["linear"],
+                        ["zoom"],
+                        15, 0,
+                        15.05, ["get", "height"]
+                    ],
+                    'fill-extrusion-base': [
+                        "interpolate", ["linear"],
+                        ["zoom"],
+                        15, 0,
+                        15.05, ["get", "min_height"]
+                    ],
+                    'fill-extrusion-opacity': .6
+                }
+            }, labelLayerId);
+        }); 
+        map5.on('load', function() {
+            // Insert the layer beneath any symbol layer.
+            var layers = map.getStyle().layers;
+
+            var labelLayerId;
+            for (var i = 0; i < layers.length; i++) {
+                if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+                    labelLayerId = layers[i].id;
+                    break;
+                }
+            }
+
+            map5.addLayer({
+                'id': '3d-buildings',
+                'source': 'composite',
+                'source-layer': 'building',
+                'filter': ['==', 'extrude', 'true'],
+                'type': 'fill-extrusion',
+                'minzoom': 15,
+                'paint': {
+                    'fill-extrusion-color': '#aaa',
+
+                    // use an 'interpolate' expression to add a smooth transition effect to the
+                    // buildings as the user zooms in
+                    'fill-extrusion-height': [
+                        "interpolate", ["linear"],
+                        ["zoom"],
+                        15, 0,
+                        15.05, ["get", "height"]
+                    ],
+                    'fill-extrusion-base': [
+                        "interpolate", ["linear"],
+                        ["zoom"],
+                        15, 0,
+                        15.05, ["get", "min_height"]
+                    ],
+                    'fill-extrusion-opacity': .6
+                }
+            }, labelLayerId);
+        });
+
+        map2.on('load', function() {
+            map2.loadImage('images/redcross.png', function(error, image) {
+                if (error) throw error;
+                map2.addImage('cat', image);
+                map2.addLayer({
+                    "id": "points",
+                    "type": "symbol",
+                    "source": {
+                        "type": "geojson",
+                        "data": {
+                            "type": "FeatureCollection",
+                            "features": [{
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-118.06310, 36.60544]
+                                }
+                            }]
+                        }
+                    },
+                    "layout": {
+                        "icon-image": "cat",
+                        "icon-size": 0.25
+                    }
+                });
+            });
+        });
+        map3.on('load', function() {
+            map3.loadImage('images/redcross.png', function(error, image) {
+                if (error) throw error;
+                map3.addImage('cat', image);
+                map3.addLayer({
+                    "id": "points",
+                    "type": "symbol",
+                    "source": {
+                        "type": "geojson",
+                        "data": {
+                            "type": "FeatureCollection",
+                            "features": [{
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-118.11325, 36.59735]
+                                }
+                            }]
+                        }
+                    },
+                    "layout": {
+                        "icon-image": "cat",
+                        "icon-size": 0.25
+                    }
+                });
+            });
+        });
+    
+var marker = new mapboxgl.Marker()
+				.setLngLat([-118.24996, 34.05543])
+				.addTo(map);
+
+var marker = new mapboxgl.Marker()
+				.setLngLat([-115.17490, 36.11785])
+				.addTo(map4);
+        
+var marker = new mapboxgl.Marker()
+				.setLngLat([-118.24996, 34.05543])
+				.addTo(map5);
+
+
+    </script>
+</body>
+</html>
