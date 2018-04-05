@@ -10,6 +10,8 @@
 body {
     margin: 0;
     padding: 0;
+    min-width: 1920px;
+    max-width: 1920px;
 }
 
 h1{
@@ -28,7 +30,6 @@ header{
     background-image: url(../images/Ironman-walk.gif);
     background-repeat: no-repeat;
     background-size:cover;
-    background-attachment: fixed;
     text-align: center;
 }
 
