@@ -27,6 +27,7 @@ header{
     margin-top: -8%;
     margin-bottom: -1.8%;
     height: 110vh;
+    min-height: 1080px;
     background-image: url(../images/Ironman-walk.gif);
     background-repeat: no-repeat;
     background-size:cover;
@@ -67,23 +68,23 @@ header h1{
 }
 #map {
     height: 100vh;
+    min-height: 1080px;
 }
 #map2 {
     height: 100vh;
-
+    min-height: 1080px;
 }
 #map3 {
     height: 100vh;
-
+    min-height: 1080px;
 }
 #map4 {
     height: 100vh;
-
+    min-height: 1080px;
 }
 #map5 {
     height: 100vh;
-    
-
+    min-height: 1080px;    
 }
 
 button{
